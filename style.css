@@ -286,7 +286,6 @@ p { color: rgba(255,255,255,0.88); }
         gap: 40px;
     }
     .benefits-grid-short, .after-bonus-grid, .program-grid, .results-grid { grid-template-columns: 1fr; }
-    .panel-inner-grid { grid-template-columns: 1fr; gap: 20px; }
     .container { padding: 0 8vw; }
 }
 
@@ -326,4 +325,206 @@ p { color: rgba(255,255,255,0.88); }
     .benefits-grid-short, .after-bonus-grid, .program-grid, .results-grid { gap: 14px; }
 
     p, .lead, .results-item ul li { font-size: 15px; line-height: 1.5; }
+}
+/* ============================= */
+/* FIX COMPARISON MOBILE (IMPORTANT) */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    /* панели: одна под другой */
+    .comparison-row {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    /* ВНУТРИ панели — ВСЕГДА 2 ФОТО В РЯД */
+    .panel-inner-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    /* ограничиваем размер фоток */
+    .panel-small {
+        aspect-ratio: 1 / 1;
+    }
+
+    .panel-small img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* ценники компактнее */
+    .price-tag {
+        font-size: 12px;
+        padding: 3px 6px;
+        border-radius: 6px;
+    }
+}
+/* ============================= */
+/* MOBILE HERO STRUCTURE FIX */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .hero-left {
+    background: linear-gradient(
+      180deg,
+      rgba(255,170,90,0.18),
+      rgba(255,80,40,0.08)
+    );
+    border: 1px solid rgba(255,200,150,0.35);
+    border-radius: 26px;
+    padding: 28px 22px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+  }
+
+  .hero-title {
+    margin-bottom: 14px;
+  }
+
+  .hero-sub {
+    margin-bottom: 22px;
+  }
+
+  .hero-cta {
+    margin-top: 20px;
+  }
+
+  .hero-features {
+    margin-top: 26px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,0.18);
+  }
+}
+@media (max-width: 768px) {
+  #why-important {
+    margin-top: 40px;
+  }
+}
+/* ============================= */
+/* HIDE HERO IMAGE + QUICK ON MOBILE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .hero-right {
+    display: none;
+  }
+}
+/* ============================= */
+/* WHY IMPORTANT — MOBILE CARDS */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+ /* ============================= */
+/* WHY IMPORTANT — CARDS (ALL SCREENS) */
+/* ============================= */
+
+.why-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.why-column {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,200,150,0.35);
+  border-radius: 26px;
+  padding: 28px;
+}
+
+.why-column h3 {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+
+  .why-column ul li {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .why-conclusion {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffb347;
+  }
+}
+/* ============================= */
+/* WHY IMPORTANT — CLEAN LIST UI */
+/* ============================= */
+
+.why-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.why-list li {
+  position: relative;
+  padding-left: 36px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* отрицание — проблема */
+.why-list.negative li::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255,80,60,0.2);
+  color: #ff6a55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* положительное — решение */
+.why-list.positive li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255,180,100,0.25);
+  color: #ffb347;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .why-content {
+    gap: 14px;
+  }
+
+  .why-column {
+    padding: 16px 14px;
+    border-radius: 20px;
+  }
+
+  .why-list li {
+    font-size: 14px;
+    padding-left: 32px;
+  }
 }
