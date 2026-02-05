@@ -2132,6 +2132,21 @@ p { color: rgba(255,255,255,0.88); }
 
 
 
+.author-photo {
+    background: none; /* убираем фон блока */
+    overflow: hidden; /* чтобы ничего не выступало за скругление */
+    border-radius: 50%; /* или оставь как было, главное overflow:hidden */
+}
+
+.author-photo img {
+    display: block; /* убираем inline-gap */
+    width: 100%;
+    height: auto;
+    border-radius: inherit; /* наследуем скругление от блока */
+    box-shadow: none; /* если тень не нужна */
+    background: none; /* если был фон у картинки */
+}
+
 
 
 
