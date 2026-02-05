@@ -15,10 +15,14 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
+    min-height: 100%;
+    margin: 0;
     background:
         radial-gradient(1200px 600px at 15% -10%, rgba(255,140,0,0.25), transparent 60%),
         radial-gradient(900px 500px at 85% 20%, rgba(255,80,0,0.25), transparent 60%),
         linear-gradient(180deg, #2b0a05 0%, #120504 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #fff4e8;
     line-height: 1.6;
     overflow-x: hidden;
@@ -2111,6 +2115,7 @@ p { color: rgba(255,255,255,0.88); }
     min-width: 100px;
     box-shadow: 0 6px 14px rgba(255,120,0,0.35);
 }
+
 
 
 
